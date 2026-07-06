@@ -1,14 +1,16 @@
-/* helpdesk stylesheet */
+* {
+  font-size: 1.5rem;
+}
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #bebcbc;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 header {
-  background-image: url("./img/1.jpg");
+  background-image: url("./img/1.png");
   background-size: cover;
   background-repeat: NO-REPEAT;
   color: gray;
@@ -20,19 +22,44 @@ main {
   padding: 20px;
 }
 
+button {
+  color: hsl(120, 97%, 39%);
+  background-color: #f1fcd5;
+}
+
+.szikra {
+  color: rgb(101, 211, 255);
+  font-weight: bold;
+}
+
+.chrome {
+  color: orangered;
+  font-weight: bold;
+}
+
+.mail {
+  color: blue;
+  font-weight: bold;
+}
+
+.edge {
+  color: blue;
+  font-weight: bold;
+}
+
+aside {
+  background-color: indianred;
+}
+
 footer {
-  /*background-color: #777777;*/
+  background-color: indianred;
   color: lightgray;
   text-align: center;
-  /*padding: 10px 0;*/
-  /*position: fixed;*/
-  bottom: 0;
-  width: 100%;
   font-family: "Yuyu", sans-serif;
 }
 
 .boki {
-  font-weight: bold;
+  font-size: 0.875rem;
 }
 
 a {

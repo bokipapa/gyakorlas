@@ -40,7 +40,7 @@
       <div>
         <a
           href="https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange"
-          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
+          ><button>
             Jelszóváltoztatás PingID-val és emailcím beírásával
           </button></a
         >
@@ -50,8 +50,10 @@
         javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:
       </p>
       <div>
-        <a href="https://ospa.otpbank.hu/adfs/portal/updatepassword"
-          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
+        <a
+          href="https://ospa.otpbank.hu/adfs/portal/updatepassword"
+          target="_blank"
+          ><button>
             Jelszóváltoztatás PingID nélkül és azonosító megadásával
           </button></a
         >
@@ -62,23 +64,37 @@
       </p>
       <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
       <div>
-        <a href="https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0"
-          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
-            Reset
-          </button></a
+        <a
+          href="https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0"
+          target="_blank"
+          ><button>Reset</button></a
         >
       </div>
+      <p>
+        💡Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd
+        abba az alábbi linket beillesztve lépni be jelszóváltoztatás után:
+      </p>
+      <p class="mail">https://mail.otp.group/owa</p>
+      <p>
+        Böngészőben elmentett jelszavakat itt tudod megnézni másold ki és
+        illeszd be az azonos böngészőbe:
+      </p>
+      <p class="chrome">chrome://password-manager/passwords?q=otpbank.hu</p>
+      <p class="edge">
+        edge://settings/autofill/passwords/details?domain=otpbank.hu
+      </p>
     </main>
 
     <aside>
       <p>
         ℹ️Ha elakadnál Ingatlanpontosként kérlek a
-        <a href="https://szikra.otpip.hu/">Szikra</a> incidenskezelőn keresztűl
-        jelezd.
+        <a href="https://szikra.otpip.hu/" target="_blank">Szikra</a>
+        incidenskezelőn keresztűl jelezd.
       </p>
       <p>
-        ℹ️Ha elakadnál Pénzügyipontosként a helpdesk@otppp emailcímre írva tudsz
-        segítséget kérni.
+        ℹ️Ha elakadnál Pénzügyipontosként a
+        <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a>
+        emailcímre írva tudsz segítséget kérni.
       </p>
     </aside>
     <footer>
