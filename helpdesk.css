@@ -1,41 +1,41 @@
 /* helpdesk stylesheet */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        text-align: center
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-    header {
-        background-image: url('./img/1.jpg');
-        background-size: cover;
-        color: gray;
-        padding: 180px 0;
-        Position: relative;
-        text-shadow: #777777 10px 10px 8px;
-    }
+header {
+  background-image: url("./img/1.jpg");
+  background-size: cover;
+  background-repeat: NO-REPEAT;
+  color: gray;
+  padding: 280px 0;
+  text-shadow: #777777 10px 10px 8px;
+}
 
-    main {
-        padding: 20px;
-    }
+main {
+  padding: 20px;
+}
 
-    footer {
-        background-color: #777777;
-        color: white;
-        text-align: center;
-        /*padding: 10px 0;*/
-        /*position: fixed;*/
-        bottom: 0;
-        width: 100%;
-    }
+footer {
+  /*background-color: #777777;*/
+  color: lightgray;
+  text-align: center;
+  /*padding: 10px 0;*/
+  /*position: fixed;*/
+  bottom: 0;
+  width: 100%;
+  font-family: "Yuyu", sans-serif;
+}
 
-    .boki {
-        color: #ffbf48;
-        font-weight: bold;
-    }
+.boki {
+  font-weight: bold;
+}
 
-    a {
-        color: rgb(101, 211, 255);
-        /*text-decoration: none;*/
-    }
+a {
+  color: rgb(101, 211, 255);
+  /*text-decoration: none;*/
+}

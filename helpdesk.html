@@ -1,34 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-    <head>
-        <title>HELPDESK</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="helpdesk.css">
-    </head>
+  <head>
+    <title>HELPDESK</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="helpdesk.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yuyu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <p class="helpdesk">HELPDESK</p>
+      <!-- <p>HELPDESK</p> -->
     </header>
-    <body>
-        <Main>
-        <p>💡Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra. </p>
-        <p>Az új jelszó mezőbe adj meg egy új jelszót ami megfelel az alábbi követelményeknek:</p>
-        <p>- Minimum 16 karakteres hosszúság,</p>
-        <p>- A jelszónak a 4 alap karakterkészlet halmazból (kisbetű, nagybetű, szám, speciális karakter) minimum 3 eltérő típust kell tartalmaznia,</p>
-        <p>- Az új jelszó megadása során az ékezetes karaktereket nem szabad használni,</p>
-        <p>- A jelszóban nem lehet benne a saját neved, sem az „OTP” </p>
-        <p>👍Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd, a jelszó változtatáshoz ha nem akarsz küszködni:</p>
-        <BR></BR>     
-        <div><a href="https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange"><button style="color: hsl(120, 97%, 39%);font-size: 20px;">Jelszóváltoztatás PingID-val és emailcím beírásával</button></a></div>
-        <p>🫣A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:</p>
-        <div><a href="https://ospa.otpbank.hu/adfs/portal/updatepassword"><button style="color: hsl(120, 97%, 39%);font-size: 20px;">Jelszóváltoztatás PingID nélkül és azonosító megadásával</button></a></div>
-        <p>🛠️Sikeres jelszóváltoztatás után kérlek nyomd meg a Reset gombot, ami után be tudsz lépni a levelezésbe. </p>
-        <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
-        <div><a href="https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0"><button style="color: hsl(120, 97%, 39%);font-size: 20px;">Reset</button></a></div>
-        </Main>
-        <footer>
-            <p>ℹ️Ha elakadnál Ingatlanpontosként kérlek a <a href="https://szikra.otpip.hu/">Szikra</a> incidenskezelőn keresztűl jelezd.</p>
-            <p>ℹ️Ha elakadnál Pénzügyipontosként a helpdesk@otppp  emailcímre írva tudsz segítséget kérni.</p>
-            <p class="boki">Created by BOKI copyright © 2026</p>
-        </footer>
-    </body>
+    <main>
+      <p>
+        💡Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra.
+      </p>
+      <p>
+        Az új jelszó mezőbe adj meg egy új jelszót ami megfelel az alábbi
+        követelményeknek:
+      </p>
+      <p>- Minimum 16 karakteres hosszúság,</p>
+      <p>
+        - A jelszónak a 4 alap karakterkészlet halmazból (kisbetű, nagybetű,
+        szám, speciális karakter) minimum 3 eltérő típust kell tartalmaznia,
+      </p>
+      <p>
+        - Az új jelszó megadása során az ékezetes karaktereket nem szabad
+        használni,
+      </p>
+      <p>- A jelszóban nem lehet benne a saját neved, sem az „OTP”</p>
+      <p>
+        👍Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd, a
+        jelszó változtatáshoz ha nem akarsz küszködni:
+      </p>
+      <div>
+        <a
+          href="https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange"
+          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
+            Jelszóváltoztatás PingID-val és emailcím beírásával
+          </button></a
+        >
+      </div>
+      <p>
+        🫣A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek
+        javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:
+      </p>
+      <div>
+        <a href="https://ospa.otpbank.hu/adfs/portal/updatepassword"
+          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
+            Jelszóváltoztatás PingID nélkül és azonosító megadásával
+          </button></a
+        >
+      </div>
+      <p>
+        🛠️Sikeres jelszóváltoztatás után kérlek nyomd meg a Reset gombot, ami
+        után be tudsz lépni a levelezésbe.
+      </p>
+      <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
+      <div>
+        <a href="https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0"
+          ><button style="color: hsl(120, 97%, 39%); font-size: 20px">
+            Reset
+          </button></a
+        >
+      </div>
+    </main>
+
+    <aside>
+      <p>
+        ℹ️Ha elakadnál Ingatlanpontosként kérlek a
+        <a href="https://szikra.otpip.hu/">Szikra</a> incidenskezelőn keresztűl
+        jelezd.
+      </p>
+      <p>
+        ℹ️Ha elakadnál Pénzügyipontosként a helpdesk@otppp emailcímre írva tudsz
+        segítséget kérni.
+      </p>
+    </aside>
+    <footer>
+      <p class="boki">Created by BOKI copyright © 2026</p>
+    </footer>
+  </body>
 </html>
