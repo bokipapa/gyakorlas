@@ -1,12 +1,10 @@
-* {
-  font-size: 1.5rem;
-}
 body {
   font-family: Arial, sans-serif;
   background-color: #bebcbc;
   margin: 0;
   padding: 0;
   text-align: center;
+  font-size: 1.5rem
 }
 
 header {
@@ -22,9 +20,48 @@ main {
   padding: 20px;
 }
 
-button {
+/*button {
   color: hsl(120, 97%, 39%);
   background-color: #f1fcd5;
+}*/
+
+button {
+  background-color: #f1fcd5;
+  /* Világoszöld háttérszín */
+  color: hsl(120, 97%, 39%);
+  /* Sötétebb zöld betűszín */
+  border: 2px solid #767676;
+  /* Határozott szürke keret */
+  border-radius: 8px;
+  /* Lekerekített sarkok */
+  padding: 12px 24px;
+  /* Belső margó: ettől lesz szép nagy és kövér a gomb */
+  font-family: Arial, sans-serif;
+  /* Betűtípus */
+  font-size: 1.5rem;
+  /* Jó olvasható betűméret */
+  font-weight: bold;
+  /* Félkövér szöveg */
+  cursor: pointer;
+  /* Átváltoztatja az egérmutatót mutatóujjas kézzé */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Finom árnyék a gomb alatt, amitől kiemelkedik a térből */
+  transition: all 0.2s ease;
+  /* Sima, animált átmenet a kattintáskor */
+}
+
+button:hover {
+  background-color: #e2f0bd;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  /* Nagyobb árnyék, mintha felemelkedne */
+}
+
+button:active {
+  background-color: #cbdc9b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Kisebb árnyék */
+  transform: translateY(2px) scale(0.98);
+  /* 2 pixellel lejjebb mozdul és picit összemegy -> TÖKÉLETES BENYOMÓDÁS */
 }
 
 .szikra {
