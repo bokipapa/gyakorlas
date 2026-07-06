@@ -49,6 +49,12 @@ button {
 
 aside {
   background-color: indianred;
+  padding: 20px 0;
+  margin: 0;
+}
+
+aside p {
+  margin: 10px 0;
 }
 
 footer {
@@ -56,10 +62,13 @@ footer {
   color: lightgray;
   text-align: center;
   font-family: "Yuyu", sans-serif;
+  padding: 20px 0;
+  margin: 0;
 }
 
 .boki {
   font-size: 0.875rem;
+  margin: 0;
 }
 
 a {
