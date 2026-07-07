@@ -2,14 +2,13 @@
 <html lang="hu">
   <head>
     <title>HELPDESK</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="helpdesk.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="helpdesk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Yuyu&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
   </head>
   <body>
     <header>
@@ -38,37 +37,22 @@
         jelszó változtatáshoz ha nem akarsz küszködni:
       </p>
       <div>
-        <a
-          href="https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange"
-          ><button>
-            Jelszóváltoztatás PingID-val és emailcím beírásával
-          </button></a
-        >
+        <button onclick="navigal3()">Jelszóváltoztatás PingID-val és emailcím beírásával</button>
       </div>
       <p>
         🫣A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek
         javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:
       </p>
       <div>
-        <a
-          href="https://ospa.otpbank.hu/adfs/portal/updatepassword"
-          target="_blank"
-          ><button>
-            Jelszóváltoztatás PingID nélkül és azonosító megadásával
-          </button></a
-        >
-      </div>
+        <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül és azonosító megadásával</button>
+     </div>
       <p>
         🛠️Sikeres jelszóváltoztatás után kérlek nyomd meg a Reset gombot, ami
         után be tudsz lépni a levelezésbe.
       </p>
       <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
       <div>
-        <a
-          href="https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0"
-          target="_blank"
-          ><button>Reset</button></a
-        >
+        <button onclick="navigal()">Reset</button>
       </div>
       <p>
         💡Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd
@@ -100,5 +84,20 @@
     <footer>
       <p class="boki">Created by BOKI copyright © 2026</p>
     </footer>
+    <script>
+    function navigal() {
+    window.open("https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0", "_blank");
+    }
+</script>
+<script>
+    function navigal2() {
+    window.open("https://ospa.otpbank.hu/adfs/portal/updatepassword", "_blank");
+    }
+</script>
+<script>
+    function navigal3() {
+    window.open("https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange", "_blank");
+    }
+</script>
   </body>
 </html>
