@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ button {
   /* Belső margó: ettől lesz szép nagy és kövér a gomb */
   font-family: Arial, sans-serif;
   /* Betűtípus */
-  font-size: 1.8rem;
+  font-size: 2rem;
   /* Jó olvasható betűméret */
   font-weight: bold;
   /* Félkövér szöveg */
