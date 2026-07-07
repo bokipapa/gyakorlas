@@ -1,10 +1,11 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #bebcbc;
+  background-color: white;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 1.5rem
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 header {
@@ -26,7 +27,7 @@ main {
 }*/
 
 button {
-  background-color: #f1fcd5;
+  background-color: white;
   /* Világoszöld háttérszín */
   color: hsl(120, 97%, 39%);
   /* Sötétebb zöld betűszín */
@@ -38,7 +39,7 @@ button {
   /* Belső margó: ettől lesz szép nagy és kövér a gomb */
   font-family: Arial, sans-serif;
   /* Betűtípus */
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   /* Jó olvasható betűméret */
   font-weight: bold;
   /* Félkövér szöveg */
@@ -51,7 +52,7 @@ button {
 }
 
 button:hover {
-  background-color: #e2f0bd;
+  background-color: white;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   /* Nagyobb árnyék, mintha felemelkedne */
 }
@@ -85,7 +86,7 @@ button:active {
 }
 
 aside {
-  background-color: indianred;
+  background-color:khaki;
   padding: 20px 0;
   margin: 0;
 }
@@ -95,7 +96,7 @@ aside p {
 }
 
 footer {
-  background-color: indianred;
+  background-color: khaki;
   color: lightgray;
   text-align: center;
   font-family: "Yuyu", sans-serif;
@@ -109,6 +110,6 @@ footer {
 }
 
 a {
-  color: rgb(101, 211, 255);
+  color: blue;
   /*text-decoration: none;*/
 }
