@@ -5,52 +5,54 @@
         <meta charset=utf-8>
         <link href=helpdesk.css rel=stylesheet>
     </head>
-    <header></header>
     <body>
-        <h1>HELPDESK</h1>
-        <p>Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra.</p>  
-    <main>
-        <p>💡 Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra.</p>
+        <header></header>
+        <main>
+            <p>Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra.</p>
 
-        <p>Az új jelszó mezőbe adj meg egy új jelszót ami megfelel az alábbi követelményeknek:</p>
+            <p>💡 Az alábbi gombokkal tudsz elnavigálni a jelszóváltoztató oldalakra.</p>
 
-        <ul>
-            <li>Minimum 16 karakteres hosszúság,</li>
-            <li>A jelszónak a 4 alap karakterkészlet halmazból (kisbetű, nagybetű, szám, speciális karakter) minimum 3 eltérő típust kell tartalmaznia,</li>
-            <li>Az új jelszó megadása során az ékezetes karaktereket nem szabad használni,</li>
-            <li>A jelszóban nem lehet benne a saját neved, sem az „OTP”</li>
-        </ul>
+            <p>Az új jelszó mezőbe adj meg egy új jelszót ami megfelel az alábbi követelményeknek:</p>
 
-        <p>👍 Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd, a jelszó változtatáshoz ha nem akarsz küszködni:</p>
-        <div>
-            <button onclick="navigal3()">Jelszóváltoztatás PingID-val és emailcím beírásával</button>
-        </div>
+            <ul>
+                <li>Minimum 16 karakteres hosszúság,</li>
+                <li>A jelszónak a 4 alap karakterkészlet halmazból (kisbetű, nagybetű, szám, speciális karakter) minimum 3 eltérő típust kell tartalmaznia,</li>
+                <li>Az új jelszó megadása során az ékezetes karaktereket nem szabad használni,</li>
+                <li>A jelszóban nem lehet benne a saját neved, sem az „OTP”</li>
+            </ul>
 
-        <p>🫣 A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:</p>
-        <div>
-            <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül és azonosító megadásával</button>
-        </div>
+            <p>👍 Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd, a jelszó változtatáshoz ha nem akarsz küszködni:</p>
+            <div>
+                <button onclick="navigal3()">Jelszóváltoztatás PingID-val és emailcím beírásával</button>
+            </div>
 
-        <p>🛠️ Sikeres jelszóváltoztatás után kérlek nyomd meg a Reset gombot, ami után be tudsz lépni a levelezésbe.</p>
-        <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
-        <div>
-            <button onclick="navigal()">Reset</button>
-        </div>
+            <p>🫣 A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:</p>
+            <div>
+                <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül és azonosító megadásával</button>
+            </div>
 
-        <p>💡 Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd abba az alábbi linket beillesztve lépni be jelszóváltoztatás után:</p>
-        <p class="mail">https://mail.otp.group/owa</p>
+            <p>🛠️ Sikeres jelszóváltoztatás után kérlek nyomd meg a Reset gombot, ami után be tudsz lépni a levelezésbe.</p>
+            <p>A "Sikeresen kijelentkezett" szöveg fogad miután végzett:</p>
+            <div>
+                <button onclick="navigal()">Reset</button>
+            </div>
 
-        <p>Böngészőben elmentett jelszavakat itt tudod megnézni másold ki és illeszd be az azonos böngészőbe:</p>
-        <p class="chrome">chrome://password-manager/passwords?q=otpbank.hu</p>
-        <p class="edge">edge://settings/autofill/passwords/details?domain=otpbank.hu</p>
-    </main>
-    <aside>
-        <p>ℹ️Ha elakadnál Ingatlanpontosként kérlek a <a href=https://szikra.otpip.hu/ target=_blank>Szikra</a> incidenskezelőn
-        <p>ℹ️Ha elakadnál Pénzügyipontosként a <a href=mailto:helpdesk@otppp.hu>helpdesk@otppp.hu</a> emailcímre írva tudsz segítséget kérni.</p>
-    </aside>
-    <footer><p class=boki>Created by Boki 2026</p></footer>
-    <script>function navigal(){window.open("https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0","_blank")}</script>
-    <script>function navigal2(){window.open("https://ospa.otpbank.hu/adfs/portal/updatepassword","_blank")}</script>
-    <script>function navigal3(){window.open("https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange","_blank")}</script>
-    </body> 
+            <p>💡 Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd abba az alábbi linket beillesztve lépni be jelszóváltoztatás után:</p>
+            <p class="mail">https://mail.otp.group/owa</p>
+
+            <p>Böngészőben elmentett jelszavakat itt tudod megnézni másold ki és illeszd be az azonos böngészőbe:</p>
+            <p class="chrome">chrome://password-manager/passwords?q=otpbank.hu</p>
+            <p class="edge">edge://settings/autofill/passwords/details?domain=otpbank.hu</p>
+        </main>
+        <aside>
+            <p>ℹ️Ha elakadnál Ingatlanpontosként kérlek a <a href=https://szikra.otpip.hu/ target=_blank>Szikra</a> incidenskezelőn
+                <p>ℹ️Ha elakadnál Pénzügyipontosként a <a href=mailto:helpdesk@otppp.hu>helpdesk@otppp.hu</a> emailcímre írva tudsz segítséget kérni.</p>
+        </aside>
+        <footer>
+            <p class=boki>Created by Boki 2026</p>
+        </footer>
+            <script>function navigal(){window.open("https://ospa.otpbank.hu/adfs/ls/?wa=wsignout1.0","_blank")}</script>
+            <script>function navigal2(){window.open("https://ospa.otpbank.hu/adfs/portal/updatepassword","_blank")}</script>
+            <script>function navigal3(){window.open("https://opifs.otpbank.hu:9031/ext/pwdchange/Identify?AdapterId=AllPasswordChange","_blank")}</script>
+    </body>
 </html>
