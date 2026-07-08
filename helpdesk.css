@@ -1,1 +1,119 @@
-@font-face { font-family: 'Yuyu'; font-style: normal; font-weight: 400; src: url('./fonts/Yuyu-Regular.ttf') format('truetype'); font-display: swap; } body { font-family: Arial, sans-serif; background-color: white; margin: 0; padding: 0; text-align: center; font-size: 2rem; font-weight: bold; } header { background-image: url("./img/1.webp"); background-size: cover; background-repeat: NO-REPEAT; color: gray; padding: 45vh 0; text-shadow: #777777 10px 10px 8px; } main { padding: 20px; } /*button { color: hsl(120, 97%, 39%); background-color: #f1fcd5; }*/ button { background-color: white; /* Világoszöld háttérszín */ color: hsl(120, 97%, 39%); /* Sötétebb zöld betűszín */ border: 2px solid #767676; /* Határozott szürke keret */ border-radius: 8px; /* Lekerekített sarkok */ padding: 12px 24px; /* Belső margó: ettől lesz szép nagy és kövér a gomb */ font-family: Arial, sans-serif; /* Betűtípus */ font-size: 2rem; /* Jó olvasható betűméret */ font-weight: bold; /* Félkövér szöveg */ cursor: pointer; /* Átváltoztatja az egérmutatót mutatóujjas kézzé */ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Finom árnyék a gomb alatt, amitől kiemelkedik a térből */ transition: all 0.2s ease; /* Sima, animált átmenet a kattintáskor */ } button:hover { background-color: white; box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Nagyobb árnyék, mintha felemelkedne */ } button:active { background-color: #cbdc9b; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Kisebb árnyék */ transform: translateY(2px) scale(0.98); /* 2 pixellel lejjebb mozdul és picit összemegy -> TÖKÉLETES BENYOMÓDÁS */ } .szikra { color: rgb(101, 211, 255); font-weight: bold; } .chrome { color: orangered; font-weight: bold; } .mail { color: blue; font-weight: bold; } .edge { color: blue; font-weight: bold; } aside { background-color:khaki; padding: 20px 0; margin: 0; } aside p { margin: 10px 0; } footer { background-color: khaki; color:#777777; text-align: center; font-family: "Yuyu", sans-serif; padding: 20px 0; margin: 0; } .boki { font-size: 0.875rem; margin: 0; } a { color: blue; /*text-decoration: none;*/ }
+@font-face {
+    font-family: 'Yuyu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Yuyu-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header {
+    background-image: url("./img/1.webp");
+    background-size: cover;
+    background-repeat: NO-REPEAT;
+    color: gray;
+    padding: 45vh 0;
+    text-shadow: #777777 10px 10px 8px;
+}
+
+main {
+    padding: 20px;
+}
+
+/*button { color: hsl(120, 97%, 39%); background-color: #f1fcd5; }*/
+button {
+    background-color: white;
+    /* Világoszöld háttérszín */
+    color: hsl(120, 97%, 39%);
+    /* Sötétebb zöld betűszín */
+    border: 2px solid #767676;
+    /* Határozott szürke keret */
+    border-radius: 8px;
+    /* Lekerekített sarkok */
+    padding: 12px 24px;
+    /* Belső margó: ettől lesz szép nagy és kövér a gomb */
+    font-family: Arial, sans-serif;
+    /* Betűtípus */
+    font-size: 2rem;
+    /* Jó olvasható betűméret */
+    font-weight: bold;
+    /* Félkövér szöveg */
+    cursor: pointer;
+    /* Átváltoztatja az egérmutatót mutatóujjas kézzé */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Finom árnyék a gomb alatt, amitől kiemelkedik a térből */
+    transition: all 0.2s ease;
+    /* Sima, animált átmenet a kattintáskor */
+}
+
+button:hover {
+    background-color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    /* Nagyobb árnyék, mintha felemelkedne */
+}
+
+button:active {
+    background-color: #cbdc9b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Kisebb árnyék */
+    transform: translateY(2px) scale(0.98);
+    /* 2 pixellel lejjebb mozdul és picit összemegy -> TÖKÉLETES BENYOMÓDÁS */
+}
+
+.szikra {
+    color: rgb(101, 211, 255);
+    font-weight: bold;
+}
+
+.chrome {
+    color: orangered;
+    font-weight: bold;
+}
+
+.mail {
+    color: blue;
+    font-weight: bold;
+}
+
+.edge {
+    color: blue;
+    font-weight: bold;
+}
+
+aside {
+    background-color: khaki;
+    padding: 20px 0;
+    margin: 0;
+}
+
+aside p {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: khaki;
+    color: #777777;
+    text-align: center;
+    font-family: "Yuyu", sans-serif;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.boki {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+a {
+    color: blue;
+    /*text-decoration: none;*/
+}
