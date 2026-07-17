@@ -14,14 +14,16 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 header {
-    background-image: url("./img/1.webp");
     background-size: cover;
     background-repeat: NO-REPEAT;
+    background-position: center;
     color: gray;
-    padding: 30vh 0;
     text-shadow: #777777 10px 10px 8px;
 }
 
@@ -38,7 +40,7 @@ button {
     /* Határozott szürke keret */
     border-radius: 8px;
     /* Lekerekített sarkok */
-    padding: 12px 24px;
+    padding: 10px 15px;
     /* Belső margó: ettől lesz szép nagy és kövér a gomb */
     font-family: Arial, sans-serif;
     /* Betűtípus */
@@ -76,6 +78,8 @@ button:active {
 .chrome {
     color: orangered;
     font-weight: bold;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 .mail {
@@ -86,6 +90,8 @@ button:active {
 .edge {
     color: blue;
     font-weight: bold;
+    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 aside {
@@ -115,4 +121,21 @@ footer {
 a {
     color: blue;
     /*text-decoration: none;*/
+}
+@media (max-width: 567px)   // ez a mobil nezetben fog megtortenni
+{
+  *{
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  header {
+    padding: 20vh 0;
+  }
+   main {
+    font-size: 14px;
+    flex-direction: column;
+    padding: 10vh 0;
+    overflow-x: hidden;
+    width: 100%;   
+  }
 }
