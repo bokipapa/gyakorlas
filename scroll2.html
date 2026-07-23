@@ -1,0 +1,55 @@
+
+	
+		try {
+			if (document.getElementById('logo').getBoundingClientRect().height==90) {
+			 document.getElementById('btn_android').style.right="87px";
+			 document.getElementById('btn_android').style.top="8px";
+			 document.getElementById('btn_ios').style.right="92px";
+			 document.getElementById('btn_ios').style.top="50px";
+			}
+
+	    } catch(e) { console.log('dyna13 err: '+e); }
+		
+	    var d = document.querySelector("#canvas");
+	    var b = document.body;
+	    var c = document.querySelectorAll("img").length;
+	    var value = 0;
+	    var target = 0;
+	    var enable = false;
+	    document.body.onmousemove = function(e) {
+		if(e == undefined) e = {clientX:event.clientX};
+		var bw = b.clientWidth;
+		var dw = d.clientWidth;
+		if(dw > bw) {
+		    enable = true;
+		    var min = Math.round(dw/c/2);
+		    var max = bw-min;
+		    var pos = e.clientX;
+		    if(pos<min) pos = min;
+		    if(pos>max) pos = max;
+		    pos -= min;
+		    target = Math.round(-(dw-bw)/(max-min)*pos);
+		} else {
+		    enable = false;
+		    d.style.marginLeft = "0";
+		}
+	    };
+	    document.body.onresize = function() {
+		enable=false;
+		d.style.marginLeft = "0";	
+	    }
+	    var animFunc = function () {
+		if(enable) {
+		    var t1 = 0.05;
+		    var t = Math.sin(Math.PI / 2 * t1);
+		    value = (1 - t) * value + t * target;
+		    d.style.marginLeft = value + "px"; 
+		}
+		if (window.requestAnimationFrame != undefined) requestAnimationFrame(animFunc);
+	    }
+	    if (window.requestAnimationFrame != undefined) {
+		requestAnimationFrame(animFunc);
+	    } else {
+		setInterval(animFunc, 20);
+	    }
+	

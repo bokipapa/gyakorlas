@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pozícióvezérelt hírfolyam</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial,sans-serif;
+    padding:40px;
+}
+
+.news-wrapper{
+    width:100%;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+
+    border-radius:20px;
+}
+
+.news-wrapper::-webkit-scrollbar{
+    display:none;
+}
+
+.news-row{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    width:300px;
+    height:180px;
+
+    flex-shrink:0;
+
+    border-radius:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:26px;
+    font-weight:bold;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+</style>
+</head>
+<body>
+
+<h1>Kiemelt hírek</h1>
+
+<br>
+
+<div class="news-wrapper" id="wrapper">
+
+    <div class="news-row">
+
+        <div class="card">Hír 1</div>
+        <div class="card">Hír 2</div>
+        <div class="card">Hír 3</div>
+        <div class="card">Hír 4</div>
+        <div class="card">Hír 5</div>
+        <div class="card">Hír 6</div>
+        <div class="card">Hír 7</div>
+        <div class="card">Hír 8</div>
+        <div class="card">Hír 9</div>
+        <div class="card">Hír 10</div>
+        <div class="card">Hír 11</div>
+        <div class="card">Hír 12</div>
+        <div class="card">Hír 13</div>
+        <div class="card">Hír 14</div>
+        <div class="card">Hír 15</div>
+        <div class="card">Hír 16</div>
+        <div class="card">Hír 17</div>
+        <div class="card">Hír 18</div>
+        <div class="card">Hír 19</div>
+        <div class="card">Hír 20</div>
+
+    </div>
+
+</div>
+
+<script>
+
+const wrapper = document.getElementById("wrapper");
+
+let targetScroll = 0;
+let currentScroll = 0;
+
+/* ----------------------------------
+   Pozíció alapján számolja ki,
+   hol kell lennie a scrollnak
+---------------------------------- */
+
+function updatePosition(clientX){
+
+    const rect =
+    wrapper.getBoundingClientRect();
+
+    const x =
+    clientX - rect.left;
+
+    let percent =
+    x / rect.width;
+
+    const activeArea = 0.8;
+    const margin =
+    (1 - activeArea) / 2;
+
+    if(percent < margin){
+
+        percent = 0;
+
+    }
+    else if(percent > (1 - margin)){
+
+        percent = 1;
+
+    }
+    else{
+
+        percent =
+        (percent - margin) /
+        activeArea;
+
+    }
+
+    const maxScroll =
+        wrapper.scrollWidth -
+        wrapper.clientWidth;
+
+    targetScroll =
+        maxScroll * percent;
+}
+
+/* ----------------------------------
+   Desktop egérvezérlés
+---------------------------------- */
+
+wrapper.addEventListener(
+    "mousemove",
+    (e)=>{
+
+        updatePosition(
+            e.clientX
+        );
+
+    }
+);
+
+/* ----------------------------------
+   Mobil:
+   rövid érintés = swipe
+   hosszú érintés = pozícióvezérlés
+---------------------------------- */
+
+let touchActive = false;
+let holdTimer = null;
+
+wrapper.addEventListener(
+    "touchstart",
+    (e)=>{
+
+        holdTimer =
+        setTimeout(()=>{
+
+            touchActive = true;
+
+            updatePosition(
+                e.touches[0].clientX
+            );
+
+        },300);
+
+    }
+);
+
+wrapper.addEventListener(
+    "touchmove",
+    (e)=>{
+
+        if(!touchActive){
+            return;
+        }
+
+        updatePosition(
+            e.touches[0].clientX
+        );
+
+    }
+);
+
+wrapper.addEventListener(
+    "touchend",
+    ()=>{
+
+        clearTimeout(
+            holdTimer
+        );
+
+        touchActive = false;
+
+    }
+);
+
+wrapper.addEventListener(
+    "touchcancel",
+    ()=>{
+
+        clearTimeout(
+            holdTimer
+        );
+
+        touchActive = false;
+
+    }
+);
+
+/* ----------------------------------
+   Animáció
+---------------------------------- */
+
+function animate(){
+
+    currentScroll +=
+    (
+        targetScroll -
+        currentScroll
+    ) * 0.02;
+
+    wrapper.scrollLeft =
+    currentScroll;
+
+    requestAnimationFrame(
+        animate
+    );
+}
+
+animate();
+
+</script>
+
+</body>
+</html>

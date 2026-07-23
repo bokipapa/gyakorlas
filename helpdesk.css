@@ -23,8 +23,16 @@ header {
     background-size: cover;
     background-repeat: NO-REPEAT;
     background-position: center;
+    width: 100%;
+    height: auto;
     color: gray;
     text-shadow: #777777 10px 10px 8px;
+}
+.header-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 
 main {
@@ -130,6 +138,7 @@ a {
   }
   header {
     padding: 20vh 0;
+    max-width: 100%;
   }
    main {
     font-size: 14px;
