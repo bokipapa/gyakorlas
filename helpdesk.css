@@ -137,14 +137,20 @@ a {
     box-sizing: border-box;
   }
   header {
-    padding: 20vh 0;
     max-width: 100%;
   }
    main {
     font-size: 14px;
     flex-direction: column;
-    padding: 10vh 0;
     overflow-x: hidden;
     width: 100%;   
   }
+  button {
+    font-size: 1rem;
+   
+  }
+  aside {
+    font-size: 1rem;
+    padding: 2px 2px;  }
+    
 }
