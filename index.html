@@ -15,6 +15,25 @@
         <link href=helpdesk.css rel=stylesheet>
     </head>
     <body>
+        <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAyNRXzFAaIhnldnbLP722_ldRcWefDyp0",
+            authDomain: "helpdesk-1a4ec.firebaseapp.com",
+            projectId: "helpdesk-1a4ec",
+            storageBucket: "helpdesk-1a4ec.firebasestorage.app",
+            messagingSenderId: "390911136844",
+            appId: "1:390911136844:web:b04380edf1cb49b3ea90e9"
+        };
+
+    // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
         <header>
             <img src="./img/1.webp" alt="HELPDESK" class="header-img"> 
         </header>
@@ -28,17 +47,17 @@
             <p>Az új jelszó megadása során az ékezetes karaktereket nem szabad használni,</p>
             <p>A jelszóban nem lehet benne a saját neved, sem az „OTP”</p>
           
-            <p>👍 Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd, a jelszó változtatáshoz ha nem akarsz küszködni:</p>
+            <p>👍 Amennyiben rendelkezel működő PingID-val csak ezt a gombot használd a jelszó változtatáshoz, ha nem akarsz küszködni:</p>
             <div>
                 <button onclick="navigal3()">Jelszóváltoztatás PingID-val és emailcím beírásával</button>
             </div>
 
             <p>🫣 A PingID nélküli jelszóváltoztatás csak új belépőknek vagy akinek javítjuk a PingID-t ajánlott, mert sajnos hektikusan működik:</p>
             <div>
-                <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül és azonosító megadásával</button>
+                <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül, azonosító megadásával</button>
             </div>
 
-            <p>💡 Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd abba az alábbi linket beillesztve lépni be jelszóváltoztatás után:</p>
+            <p>💡 Ahhoz, hogy jól működjön, célszerű egy inkognitó ablakot nyitni, majd abba az alábbi linket beillesztve tudsz belépni jelszóváltoztatás után:</p>
             <p class="mail">https://mail.otp.group/owa</p>
 
             <p>Böngészőben elmentett jelszavakat itt tudod megnézni másold ki és illeszd be az azonos böngészőbe:</p>
@@ -46,7 +65,7 @@
             <p class="edge">edge://settings/autofill/passwords/details?domain=otpbank.hu</p>
         </main>
         <aside>
-            <p>ℹ️Ha elakadnál Ingatlanpontosként kérlek a <a href="https://szikra.otpip.hu/ikr-web/ikr/createincident?execution=e3s1" target=_blank>Szikra</a> incidenskezelőn
+            <p>ℹ️Ha elakadnál Ingatlanpontosként kérlek a <a href="https://szikra.otpip.hu/ikr-web/ikr/createincident?execution=e3s1" target=_blank>Szikra</a> incidenskezelőn jelezd a problémát.</p>
                 <p>ℹ️Ha elakadnál Pénzügyipontosként a <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a> emailcímre írva tudsz segítséget kérni.</p>
         </aside>
         <footer>
