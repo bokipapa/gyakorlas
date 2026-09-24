@@ -154,3 +154,34 @@ a {
     padding: 2px 2px;  }
     
 }
+/* --- Letisztult GYIK Stílusok --- */
+
+/* Kategória címsorok */
+.faq-category h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Kérdések blokkja - semmi háttér, csak minimális távolság */
+details {
+    margin-bottom: 0.8rem;
+}
+
+/* A kattintható kérdés szövege */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* A válasz szövege - behúzva a kérdés alá */
+details p {
+    margin-top: 0.4rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+/* Piros kiemelés az angol hibaüzeneteknek */
+.error-text {
+    color: #ff4d4d;
+    font-weight: bold;
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hu">
+    <head>
+        <title>HELPDESK - Gyakran Ismételt Kérdések</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#0f172a">
+        <meta name="referrer" content="no-referrer">
+        <link href="./img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+        <link href="helpdesk.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="./img/1.webp" alt="HELPDESK" class="header-img"> 
+        </header>
+
+        <main>
+            <div class="nav-back">
+                <a href="index.html">⬅️ Vissza a jelszóváltoztatáshoz</a>
+            </div>
+
+            <h1>❓ Gyakran Ismételt Kérdések</h1>
+            <p>Itt megtalálod a válaszokat a belépéssel, jelszavakkal és rendszerekkel kapcsolatos leggyakoribb problémákra.</p> <p>A kérdésre kattintva lenyílik a válasz.</p>
+
+            <!-- 1. KATEGÓRIA: Jelszóváltás & Fiók -->
+            <section class="faq-category">
+                <h2>🔐 Jelszóváltoztatás</h2>
+
+                <details>
+                    <summary>Milyen gyakran kell jelszót cserélnem?</summary>
+                    <p>A jelszót a vállalati biztonsági szabályzat alapján 90 naponta kötelező frissíteni. A lejárat előtt e-mailben is kapsz értesítést, ahol a <span style="color: blue;">"Ping Federate – OTP jelszó csere"</span> linket kell választani</p>
+                </details>
+
+                <details>
+                    <summary>Mi a teendő, ha elfelejtettem a régi jelszavamat?</summary>
+                    <p>Ha a meglévő jelszavadat nem tudod, az automatikus felületen nem tudsz újat megadni.</p> <p>🏘️ Ingatlanpontosként: kérlek, nyiss egy jegyet a Szikra rendszereken keresztül vagy ha nem tudsz oda belépni írj a otpipit@otpip.hu e-mail címre.</p>
+                    <p>💵 Pénzügyipontosként: írj a helpdesk@otppp.hu e-mail címre.</p>
+                </details>
+
+                <details>
+                    <summary>Miért nem fogadja el a rendszer az új jelszavamat?</summary>
+                    <p>Győződj meg róla, hogy a jelszó legalább 16 karakteres, tartalmaz kis- és nagybetűt, számot, valamint speciális karaktert. Fontos: ékezetes betűk, a neved, vagy az „OTP” szórészlet nem szerepelhet benne!</p>
+                    <p>Ha a <span style="color: red;">The password you entered does not meet policy restrictions. Please try again.</span> hibaüzenetet kapod akkor nem felelt meg a fenti követelményeknek az új jelszavad.</p>
+                </details>
+
+                <details>
+                    <summary>Emailcím és a jó régi jelszó után hibaüzenetet kapok: <span style="color: red;">Authentication failed</span>.</summary>
+                    <p>A PingID nem működik ennek több oka is lehet:</p>
+                    <p>A telefonon azt írja hogy <span style="color: red;">TILTOTT</span> Ez azt jelenti, hogy a telefonodon futó operációs rendszer nem engedélyezi a PingID használatát mert túl régi. Készüléket kell cserélni</p>
+                    <p>A telefon még nincs regisztrálva a PingID rendszerben ebben az esetben nem jó weboldalon próbálsz meg jelszót változtatni, az előző oldalon válaszd a <span style="color: hsl(120, 97%, 39%);">Jelszóváltoztatás PingID nélkül, azonosító megadásával</span> </p>
+                </details>
+
+                <details>
+                    <summary>Miért nem tudok belépni a jelszóváltoztatás után?</summary>
+                    <p>Ha a jelszóváltoztatás után nem tudsz belépni: 30 perccel az utolsó próbálkozás után egy inkognitó (privát) böngészőablakot kell nyitni, majd abba az alábbi linket beillesztve próbálj belépni:</p>
+                    <p class="mail">https://mail.otp.group/owa</p>
+                </details>
+            </section>
+
+            <!-- 2. KATEGÓRIA: PingID / Kétlépcsős azonosítás -->
+            <section class="faq-category">
+                <h2>📱 PingID és Kétlépcsős Azonosítás</h2>
+
+                <details>
+                    <summary>Új telefonom van, hogyan állíthatom be újra a PingID-t?</summary>
+                    <p>Új eszköz regisztrálásához a Helpdesk segítségére lesz szükség a meglévő párosítás törléséhez. Ezután tudod az új telefonodon beszkennelni a QR-kódot.</p>
+                </details>
+
+                <details>
+                    <summary>Nem érkezik meg a Push értesítés a telefonomra, mit tegyek?</summary>
+
+                    <p>Ellenőrizd az internetkapcsolatot a telefonodon, és győződj meg róla, hogy a PingID app értesítései engedélyezve vannak. Szükség esetén használd a belépéshez az applikációban generált egyösszegű jelkódot (Passcode).</p>
+                </details>
+            </section>
+
+            <!-- 3. KATEGÓRIA: Böngészők és Elérések -->
+            <section class="faq-category">
+                <h2>🌐 Böngésző beállítások és Webmail</h2>
+
+                <details>
+                    <summary>Miért érdemes Inkognitó (Privát) ablakot használni?</summary>
+                    <p>Az Inkognitó ablak figyelmen kívül hagyja a böngészőben korábban elmentett hibás jelszavakat és munkamenet-adatokat (sütiket), így elkerülhetők a belépési hurokhiba-jelenségek.</p>
+                </details>
+
+                <details>
+                    <summary>Hol találom a böngészőben elmentett jelszavaimat?</summary>
+                    <p>Chrome esetén másold ezt a címsorba: <code>chrome://password-manager/passwords</code><br>Edge esetén használod ezt: <code>edge://settings/autofill/passwords</code></p>
+                </details>
+            </section>
+
+            <!-- Itt folytathatod a többi kategóriával és kérdéssel... -->
+
+        </main>
+
+        <aside>
+            <p>ℹ️ Ha elakadnál Ingatlanpontosként kérlek a <a href="https://szikra.otpip.hu/ikr-web/ikr/createincident?execution=e3s1" target="_blank">Szikra</a> incidenskezelőn jelezd a problémát.</p>
+            <p>ℹ️ Ha elakadnál Pénzügyipontosként a <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a> emailcímre írva tudsz segítséget kérni.</p>
+        </aside>
+
+        <footer>
+            <p class="boki">Created by Boki 2026</p>
+        </footer>
+    </body>
+</html>
