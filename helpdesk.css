@@ -19,7 +19,7 @@
   border-radius: 30px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 14pxtant; /* Felülírja a body 2rem méretét */
+  font-size: 14px; /* Felülírja a body 2rem méretét */
   font-weight: bold;
   line-height: 1.2;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
