@@ -5,30 +5,36 @@
     src: url('./fonts/Yuyu-Regular.ttf') format('truetype');
     font-display: swap;
 }
+/* Alapértelmezett stílus (Asztali gép / Laptop) */
 .floating-faq-button {
   position: fixed;
-  bottom: 20px;       /* Távolság az oldal aljától */
-  right: 20px;        /* Távolság az oldal jobb szélétől */
-  z-index: 9999;      /* Biztosítja, hogy minden más elem felett lebegjen */
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
   
-  background-color: hsl(120, 97%, 39%); /* Gomb háttérszíne (átírható) */
-  color: #ffffff;            /* Szöveg színe */
+  background-color: hsl(120, 97%, 39%);
+  color: #ffffff;
   padding: 12px 20px;
-  border-radius: 30px;       /* Lekerekített szélek */
-  text-decoration: none;     /* Aláhúzás eltávolítása */
+  border-radius: 30px;
+  text-decoration: none;
   font-family: sans-serif;
   font-size: 14px;
   font-weight: bold;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Finom árnyék */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
+  
+  /* Megakadályozza, hogy mobilon a kijelző széléhez érjen */
+  max-width: calc(100% - 40px);
+  text-align: center;
 }
 
-/* Egérráhúzási effektus (Hover) */
 .floating-faq-button:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
 }
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -175,6 +181,14 @@ a {
   aside {
     font-size: 1rem;
     padding: 2px 2px;  }
+
+ .floating-faq-button {
+    /* Biztonságos távolság a mobil böngészők alsó sávjától */
+    bottom: calc(20px + env(safe-area-inset-bottom)); 
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
     
 }
 /* --- Letisztult GYIK Stílusok --- */
