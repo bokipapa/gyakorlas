@@ -5,27 +5,29 @@
     src: url('./fonts/Yuyu-Regular.ttf') format('truetype');
     font-display: swap;
 }
-/* Alapértelmezett stílus (Asztali gép / Laptop) */
+
+/* Lebegő GYIK gomb (Asztali / Laptop) */
 .floating-faq-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 99999;
   
   background-color: hsl(120, 97%, 39%);
-  color: #ffffff;
+  color: #ffffff !important; /* Biztosítja a fehér betűszínt */
   padding: 12px 20px;
   border-radius: 30px;
   text-decoration: none;
-  font-family: sans-serif;
-  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 14px !important; /* Felülírja a body 2rem méretét */
   font-weight: bold;
+  line-height: 1.2;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   
-  /* Megakadályozza, hogy mobilon a kijelző széléhez érjen */
   max-width: calc(100% - 40px);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .floating-faq-button:hover {
@@ -33,7 +35,6 @@
   transform: translateY(-2px);
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -57,6 +58,7 @@ header {
     color: gray;
     text-shadow: #777777 10px 10px 8px;
 }
+
 .header-img {
     width: 100%;
     height: auto;
@@ -70,41 +72,27 @@ main {
 
 button {
     background-color: white;
-    /* Világoszöld háttérszín */
     color: hsl(120, 97%, 39%);
-    /* Sötétebb zöld betűszín */
     border: 2px solid #767676;
-    /* Határozott szürke keret */
     border-radius: 8px;
-    /* Lekerekített sarkok */
     padding: 10px 15px;
-    /* Belső margó: ettől lesz szép nagy és kövér a gomb */
     font-family: Arial, sans-serif;
-    /* Betűtípus */
     font-size: 2rem;
-    /* Jó olvasható betűméret */
     font-weight: bold;
-    /* Félkövér szöveg */
     cursor: pointer;
-    /* Átváltoztatja az egérmutatót mutatóujjas kézzé */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Finom árnyék a gomb alatt, amitől kiemelkedik a térből */
     transition: all 0.2s ease;
-    /* Sima, animált átmenet a kattintáskor */
 }
 
 button:hover {
     background-color: white;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    /* Nagyobb árnyék, mintha felemelkedne */
 }
 
 button:active {
     background-color: #cbdc9b;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Kisebb árnyék */
     transform: translateY(2px) scale(0.98);
-    /* 2 pixellel lejjebb mozdul és picit összemegy -> TÖKÉLETES BENYOMÓDÁS */
 }
 
 .szikra {
@@ -157,67 +145,65 @@ footer {
 
 a {
     color: blue;
-    /*text-decoration: none;*/
 }
-@media (max-width: 567px)
-{
-  *{
+
+/* Mobil és tablet beállítások (768px alatt) */
+@media (max-width: 768px) {
+  * {
     max-width: 100%;
     box-sizing: border-box;
   }
+  
   header {
     max-width: 100%;
   }
-   main {
+  
+  main {
     font-size: 14px;
     flex-direction: column;
     overflow-x: hidden;
     width: 100%;   
   }
+  
   button {
     font-size: 1rem;
-   
   }
+  
   aside {
     font-size: 1rem;
-    padding: 2px 2px;  }
-
- .floating-faq-button {
-    /* Biztonságos távolság a mobil böngészők alsó sávjától */
-    bottom: calc(20px + env(safe-area-inset-bottom)); 
-    right: 15px;
-    padding: 10px 16px;
-    font-size: 12px;
+    padding: 2px 2px;
   }
-    
+
+  .floating-faq-button {
+    bottom: calc(15px + env(safe-area-inset-bottom)); 
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 12px !important;
+  }
 }
+
 /* --- Letisztult GYIK Stílusok --- */
 
-/* Kategória címsorok */
 .faq-category h2 {
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-/* Kérdések blokkja - semmi háttér, csak minimális távolság */
 details {
     margin-bottom: 0.8rem;
 }
 
-/* A kattintható kérdés szövege */
 summary {
     font-weight: bold;
     cursor: pointer;
 }
 
-/* A válasz szövege - behúzva a kérdés alá */
 details p {
     margin-top: 0.4rem;
     margin-bottom: 0.5rem;
     padding-left: 1rem;
 }
 
-/* Piros kiemelés az angol hibaüzeneteknek */
 .error-text {
     color: #ff4d4d;
     font-weight: bold;
