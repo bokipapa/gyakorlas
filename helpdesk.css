@@ -14,12 +14,12 @@
   z-index: 99999;
   
   background-color: hsl(120, 97%, 39%);
-  color: #ffffff !important; /* Biztosítja a fehér betűszínt */
+  color: #ffffff; /* Biztosítja a fehér betűszínt */
   padding: 12px 20px;
   border-radius: 30px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 14px !important; /* Felülírja a body 2rem méretét */
+  font-size: 14pxtant; /* Felülírja a body 2rem méretét */
   font-weight: bold;
   line-height: 1.2;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -147,8 +147,8 @@ a {
     color: blue;
 }
 
-/* Mobil és tablet beállítások (567px alatt) */
-@media (max-width: 567px) {
+/* Mobil és tablet beállítások (768px alatt) */
+@media (max-width: 768px) {
   * {
     max-width: 100%;
     box-sizing: border-box;
