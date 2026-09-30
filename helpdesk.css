@@ -5,7 +5,30 @@
     src: url('./fonts/Yuyu-Regular.ttf') format('truetype');
     font-display: swap;
 }
+.floating-faq-button {
+  position: fixed;
+  bottom: 20px;       /* Távolság az oldal aljától */
+  right: 20px;        /* Távolság az oldal jobb szélétől */
+  z-index: 9999;      /* Biztosítja, hogy minden más elem felett lebegjen */
+  
+  background-color: hsl(120, 97%, 39%); /* Gomb háttérszíne (átírható) */
+  color: #ffffff;            /* Szöveg színe */
+  padding: 12px 20px;
+  border-radius: 30px;       /* Lekerekített szélek */
+  text-decoration: none;     /* Aláhúzás eltávolítása */
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Finom árnyék */
+  transition: all 0.3s ease;
+}
 
+/* Egérráhúzási effektus (Hover) */
+.floating-faq-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.3);
+}
 body {
     font-family: Arial, sans-serif;
     background-color: white;
