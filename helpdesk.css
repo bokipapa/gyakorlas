@@ -147,8 +147,8 @@ a {
     color: blue;
 }
 
-/* Mobil és tablet beállítások (768px alatt) */
-@media (max-width: 768px) {
+/* Mobil és tablet beállítások (567px alatt) */
+@media (max-width: 567px) {
   * {
     max-width: 100%;
     box-sizing: border-box;
