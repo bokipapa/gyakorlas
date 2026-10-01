@@ -67,7 +67,8 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 1px;
+    margin: 0;
 }
 
 button {
@@ -75,13 +76,14 @@ button {
     color: hsl(120, 97%, 39%);
     border: 2px solid #767676;
     border-radius: 8px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     font-family: Arial, sans-serif;
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
+    margin: 10px 0;
 }
 
 button:hover {
@@ -134,7 +136,7 @@ footer {
     color: #777777;
     text-align: center;
     font-family: "Yuyu", sans-serif;
-    padding: 20px 0;
+    padding: 5px 0;
     margin: 0;
 }
 
@@ -179,13 +181,13 @@ a {
     right: 15px;
     padding: 10px 14px;
     font-size: 12px !important;
-  }
+  }  
 }
 
 /* --- Letisztult GYIK Stílusok --- */
 
 .faq-category h2 {
-    margin-top: 2rem;
+    margin-top: 10px;
     margin-bottom: 1rem;
 }
 
