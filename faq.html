@@ -21,7 +21,8 @@
             </div> -->
 
             <h2>❓ Gyakran Ismételt Kérdések</h2>
-            <p>Itt megtalálod a válaszokat a belépéssel, jelszavakkal és rendszerekkel kapcsolatos leggyakoribb problémákra.</p> <p>A kérdésre kattintva lenyílik a válasz.</p>
+            <p>Itt megtalálod a válaszokat a belépéssel, jelszavakkal és rendszerekkel kapcsolatos leggyakoribb problémákra.</p>
+            <p>A kérdésre kattintva lenyílik a válasz.</p>
 
             <!-- 1. KATEGÓRIA: Jelszóváltás & Fiók -->
             <section class="faq-category">
@@ -29,36 +30,47 @@
 
                 <details>
                     <summary>Milyen gyakran kell jelszót cserélnem?</summary>
-                    <p>A jelszót a vállalati biztonsági szabályzat alapján 90 naponta kötelező frissíteni. <br> Lejárat előtt e-mailben is kapsz értesítést, ahol a <span style="color: blue;">"Ping Federate – OTP jelszó csere"</span> linket kell választani</p>
+                    <p>A jelszót a vállalati biztonsági szabályzat alapján 90 naponta kötelező frissíteni. <br> Lejárat előtt e-mailben is kapsz értesítést, ahol a <span style="color: blue;">"Ping Federate – OTP jelszó csere"</span> linket kell választanod.</p>
                 </details>
 
                 <details>
                     <summary>Mi a teendő, ha elfelejtettem a régi jelszavamat?</summary>
-                    <p>Ha a meglévő jelszavadat nem tudod akkor:<br>🏘️ Ingatlanpontosként: kérlek, nyiss egy jegyet a Szikra rendszeren keresztül, <br>vagy jelezd az irodavezetőnek aki felad egy szikrajegyet, <br>vagy ha nem tudsz a szikrába belépni írj a otpipit@otpip.hu e-mail címre.<br>
-                    💵 Pénzügyipontosként: írj a helpdesk@otppp.hu e-mail címre.</p>
+                    <p>Ha a meglévő jelszavadat nem tudod:<br>
+                    🏘️ Ingatlanpontosként: kérlek, nyiss egy jegyet a Szikra rendszeren keresztül, vagy jelezd az irodavezetőnek, aki felad egy Szikra-jegyet, vagy ha nem tudsz a Szikrába belépni, írj az <a href="mailto:otpipit@otpip.hu">otpipit@otpip.hu</a> e-mail címre.<br>
+                    💵 Pénzügyipontosként: írj a <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a> e-mail címre.</p>
                 </details>
 
                 <details>
                     <summary>Miért nem fogadja el a rendszer az új jelszavamat?</summary>
-                    <p>Győződj meg róla, hogy a jelszó legalább 16 karakteres, tartalmaz kis- és nagybetűt, számot, valamint speciális karaktert. Fontos: ékezetes betűk, a neved, vagy az „OTP” szórészlet nem szerepelhet benne!</p>
-                    <p>Ha a <span style="color: red;">The password you entered does not meet policy restrictions. Please try again.</span> hibaüzenetet kapod akkor nem felelt meg a fenti követelményeknek az új jelszavad.</p>
+                    <p>Győződj meg róla, hogy a jelszó legalább 16 karakteres, tartalmaz kis- és nagybetűt, számot, valamint speciális karaktert. Fontos: ékezetes betűk, a neved vagy az „OTP” szórészlet nem szerepelhet benne!</p>
+                    <p>Ha a <span style="color: red;">The password you entered does not meet policy restrictions. Please try again.</span> hibaüzenetet kapod, akkor az új jelszavad nem felelt meg a fenti követelményeknek.</p>
                 </details>
 
                 <details>
-                    <summary>Emailcím és a jó régi jelszó után hibaüzenetet kapok: <span style="color: red;">Authentication failed</span>.</summary>
+                    <summary>E-mail cím és a helyes jelszó beírása után hibaüzenetet kapok: <span style="color: red;">Authentication failed</span>.</summary>
                     <p>A PingID nem működik. Ennek több oka is lehet:</p>
-                    <p>A telefonon azt írja hogy <span style="color: red;">TILTOTT</span> Ez azt jelenti, hogy a telefonodon futó operációs rendszer nem engedélyezi a PingID használatát mert túl régi. Készüléket kell cserélni</p>
-                    <p>A telefon még nincs regisztrálva a PingID rendszerben ebben az esetben nem jó weboldalon próbálsz meg jelszót változtatni, kérlek itt változtass jelszót:
+                    <p>A telefonon azt írja, hogy <span style="color: red;">TILTOTT</span>: Ez azt jelenti, hogy a telefonodon futó operációs rendszer nem engedélyezi a PingID használatát, mert túl régi. Készüléket kell cserélni.</p>
+                    <p>A telefon még nincs regisztrálva a PingID rendszerben: ebben az esetben nem a megfelelő weboldalon próbálsz jelszót változtatni. Kérlek, itt változtass jelszót:</p>
                     <div>
-                    <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül, azonosító megadásával</button>
-                    </div> </p>
+                        <button onclick="navigal2()">Jelszóváltoztatás PingID nélkül, azonosító megadásával</button>
+                    </div>
                 </details>
 
                 <details>
                     <summary>Miért nem tudok belépni a jelszóváltoztatás után?</summary>
-                    <p>Ha a jelszóváltoztatás után nem tudsz belépni: 30 perccel az utolsó próbálkozás után egy inkognitó (privát) böngészőablakot kell nyitni, majd abba az alábbi linket beillesztve próbálj belépni:</p>
+                    <p>Ha a jelszóváltoztatás után nem tudsz belépni: 30 perccel az utolsó próbálkozás után nyiss egy inkognitó (privát) böngészőablakot, majd abba az alábbi linket beillesztve próbálj belépni:</p>
                     <p class="mail">https://mail.otp.group/owa</p>
-                    <p>Amennyiben régen léptél be azaz több mint 60 napja, akkor bár engedi a rendszer a jelszóváltoztatást, mégsem fogsz tudni belépni, mert a fiókod "lejár". Ebben az esetben csak jelszóvisszaállítás után fogsz tudni belépni. Jelezd felénk, visszaállíttatjuk a bankkal és küldjük.</p>
+                    <p>Amennyiben régen léptél be (több mint 60 napja), akkor bár engedi a rendszer a jelszóváltoztatást, mégsem fogsz tudni belépni, mert a fiókod lejárt. Ebben az esetben csak jelszóvisszaállítás után fogsz tudni belépni. Jelezd felénk, visszaállíttatjuk a bankkal, és küldjük az új adatokat.</p>
+                </details>
+
+                <details>
+                    <summary>Írtam nektek, hogy nem tudok belépni. Más információ ugye nem kell?</summary>
+                    <p>De igen, szükségünk van rá! Ez az információ kevés számunkra, mert körülbelül 20-féle hiba létezik, és mindegyik esetben másképpen járunk el. Szükségünk van arra, hogy hova, mivel próbáltál meg belépni, és milyen hibaüzenet érkezett, valamint arra, hogy van-e PingID-d, és azzal történt-e valami (pl. letöröltem és újratelepítettem, új telefonom van és a régit már eladtam stb.). Ha csak annyit írsz, hogy „Nem enged be”, „Nem sikerült” vagy „Nem jó”, akkor vissza fogunk kérdezni. Ezeket a felesleges köröket kerüljük el a hatékonyabb hibajavítás érdekében!</p>
+                </details>
+
+                <details>
+                    <summary>Írtam nektek, hogy köszönöm.</summary>
+                    <p>Nagyon kedves tőled, de önmagában nem igényeljük a köszönőüzeneteket, mert így nincs információtartalma. Ha visszajelzéssel kötöd össze (pl.: „Köszönöm, sikerült belépni!”), az már segítség számunkra. Sok üzenetet kapunk, és a „Köszönöm.” önmagában csak növeli a feldolgozandó levelek számát.</p>
                 </details>
             </section>
 
@@ -67,52 +79,56 @@
                 <h2>📱 PingID és Kétlépcsős Azonosítás</h2>
                 
                 <details>
-                    <summary>Letörölhetem, a működő PingID-t és újratelepíthetem?</summary>
-                    <p>Nem! A Pingid-t ahogy letörlöd tönkremegy a regisztráció. Utána hiába telepíted újra nem fog működni. Vagy párosítás megszűntetése után törölheted le, vagy az Eszköz módosításával másik készülékre költöztetheted. </p>
+                    <summary>Letörölhetem a működő PingID-t, és újratelepíthetem?</summary>
+                    <p>Nem! Amint letörlöd a PingID-t, tönkremegy a regisztráció. Utána hiába telepíted újra, nem fog működni. Vagy a párosítás megszüntetése után törölheted le, vagy az „Eszköz módosítása” opcióval másik készülékre költöztetheted.</p>
                 </details>
 
                 <details>
                     <summary>Új telefonom van, hogyan állíthatom be újra a PingID-t?</summary>
-                    <p>A régi készüléken lépj be a PingID-ba válaszd a eszköz módosítása menüpontot, azt végignyomkodva megkapod a QR kódot melyet az új készüléken levő PingID-val beolvasva átköltözik.</p>
+                    <p>A régi készüléken lépj be a PingID-ba, válaszd az „Eszköz módosítása” menüpontot. A lépéseket követve megkapod a QR-kódot, amelyet az új készüléken lévő PingID-val beolvasva a regisztrációd átköltözik.</p>
                 </details>
+
                 <details>
-                    <summary>A telefonom szervízbe adom ahol letörölnek róla mindent, <br> eladom de még nincs nálam az új, mit tegyek a PingID-val?</summary>
-                    <p>A készüléken lépj be a PingID-ba a bal felső menüben  válaszd a párosítás megszűntetése menüpontot, azt végignyomkodva megszűnik a regisztráció. Amint megvan az új-letörölt készülék, töltsd le rá a PingID appot, majd lépj be a levelezésbe, és az ott megjelenő QR kódot a PingID-val beolvasva tudod regisztrálni a készülékedet. Képernyőzárnak lennie kell a készüléken.</p>
+                    <summary>A telefonomat szervizbe adom (ahol letörölnek róla mindent) vagy eladom, de még nincs nálam az új. Mit tegyek a PingID-val?</summary>
+                    <p>A készüléken lépj be a PingID-ba, a bal felső menüben válaszd a „Párosítás megszüntetése” menüpontot. A lépéseket követve megszűnik a regisztráció. Amint megvan az új (vagy alaphelyzetbe állított) készülék, töltsd le rá a PingID appot, majd lépj be a levelezésbe, és az ott megjelenő QR-kódot a PingID-val beolvasva tudod regisztrálni az eszközt. Fontos: képernyőzárnak lennie kell a készüléken!</p>
                 </details>
 
                 <details>
                     <summary>Nem érkezik meg a Push értesítés a telefonomra, mit tegyek?</summary>
-
-                    <p>Ellenőrizd az internetkapcsolatot a telefonodon, és győződj meg róla, hogy a PingID app értesítései engedélyezve vannak. Ezt a PingID megnyitása után a bal felső menüben a Beállítások menüpontban tudod ellenőrízni. Szükség esetén használd a belépéshez az applikációban generált egyszeri kódot (Passcode).</p>
-                    <p> Előfordulhat, hogy csak akkor jelenik meg az értesítés, ha előre megnyitod a PingID-t a telefonon, és utána lépsz be a levelezésbe.</p>
+                    <p>Ellenőrizd az internetkapcsolatot a telefonodon, és győződj meg róla, hogy a PingID app értesítései engedélyezve vannak. Ezt a PingID megnyitása után a bal felső menüben, a Beállítások menüpontban tudod ellenőrizni. Szükség esetén használd a belépéshez az applikációban generált egyszeri kódot (Passcode).</p>
+                    <p>Előfordulhat, hogy csak akkor jelenik meg az értesítés, ha előre megnyitod a PingID-t a telefonon, és csak utána lépsz be a levelezésbe.</p>
                 </details>
             </section>
 
             <!-- 3. KATEGÓRIA: Böngészők és Elérések -->
             <section class="faq-category">
-                <h2>🌐 Böngésző beállítások és Webmail</h2>
+                <h2>🌐 Böngészőbeállítások és Webmail</h2>
 
                 <details>
                     <summary>Miért érdemes Inkognitó (Privát) ablakot használni?</summary>
-                    <p>Az Inkognitó ablak figyelmen kívül hagyja a böngészőben korábban elmentett hibás jelszavakat és munkamenet-adatokat (sütiket), így elkerülhetők a belépési hurokhiba-jelenségek.</p>
+                    <p>Az Inkognitó ablak figyelmen kívül hagyja a böngészőben korábban elmentett hibás jelszavakat és munkamenet-adatokat (sütiket), így elkerülhetők a belépési hurokhibák.</p>
                 </details>
 
                 <details>
                     <summary>Hol találom a böngészőben elmentett jelszavaimat?</summary>
-                    <p>Chrome esetén másold ezt a címsorba: <code>chrome://password-manager/passwords</code><br>Edge esetén használod ezt: <code>edge://settings/autofill/passwords</code></p>
+                    <p>Chrome esetén másold ezt a címsorba: <code>chrome://password-manager/passwords</code><br>Edge esetén használd ezt: <code>edge://settings/autofill/passwords</code></p>
+                </details>
+
+                <details>
+                    <summary>Hogyan tároljam a jelszavaimat?</summary>
+                    <p>A böngészőben kényelmes tárolni a jelszavakat, de fennáll a veszélye, hogy egy sikertelen jelszóváltoztatás után felülíródik, és így elveszik az aktuális jelszó. Egy egyszerű és bevált megoldás, ha a számítógép asztalán készítesz egy jegyzetet, amiben tárolod a jelszavakat. Jelszóváltoztatás előtt beírod a leendő 16 karakteres jelszavadat az aktuális jelszó alá, elmented, és a változtatáskor innen kimásolva és a felületre beillesztve biztosan a feljegyzett jelszóra módosítod a jelenlegit. Így megmarad akkor is, ha a böngészőben felülíródna, valamint látod az előző jelszavakat is, hogy olyan újat adj meg, ami nem egyezik az utolsó 5 jelszó egyikével sem.</p>
                 </details>
             </section>
-           <!-- <div class="nav-back">
+
+            <!-- <div class="nav-back">
                 <a href="index.html">⬅️ Vissza a jelszóváltoztatáshoz</a>
             </div> -->
-
-            <!-- Itt folytathatod a többi kategóriával és kérdéssel... -->
 
         </main>
 
         <aside>
-            <p>ℹ️ Ha elakadnál Ingatlanpontosként kérlek a <a href="https://szikra.otpip.hu/ikr-web/ikr/createincident?execution=e3s1" target="_blank">Szikra</a> incidenskezelőn jelezd a problémát.</p>
-            <p>ℹ️ Ha elakadnál Pénzügyipontosként a <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a> emailcímre írva tudsz segítséget kérni.</p>
+            <p>ℹ️ Ha elakadnál Ingatlanpontosként, kérlek, a <a href="https://szikra.otpip.hu/ikr-web/ikr/createincident?execution=e3s1" target="_blank">Szikra</a> incidenskezelőben jelezd a problémát.</p>
+            <p>ℹ️ Ha elakadnál Pénzügyipontosként, a <a href="mailto:helpdesk@otppp.hu">helpdesk@otppp.hu</a> e-mail címre írva tudsz segítséget kérni.</p>
         </aside>
 
         <footer>
@@ -120,7 +136,7 @@
         </footer>
 
         <a href="index.html" class="floating-faq-button">
-          ⬅️ JELSZÓVÁLTOZTATÁS
+            ⬅️ JELSZÓVÁLTOZTATÁS
         </a>
     </body>
 </html>
