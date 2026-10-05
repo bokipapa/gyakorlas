@@ -79,5 +79,22 @@
         <a href="faq.html" class="floating-faq-button">
            ❔ GYAKORI KÉRDÉSEK
         </a>
+                <script>
+        // A helpdesk oldaladon futó kód
+        window.addEventListener('DOMContentLoaded', () => {
+        const data = {
+            pageUrl: window.location.pathname,
+            referrer: document.referrer,
+            screenWidth: window.screen.width
+        };
+
+        // Elküldjük az adatot a saját PHP gyűjtőnknek (pl. collect.php)
+        fetch('https://analytics.ipkiber.hu/collect.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+    });
+    </script>
     </body>
 </html>
