@@ -190,10 +190,11 @@ a {
   padding: 10px 14px;
   transition: all 0.25s ease-in-out;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  text-align: left;
+  text-align: left; 
 }
 details p {
     text-align: left; /* A válasz szövege is legyen balra igazítva */
+    font-size: 14px;
   }
 }
 
