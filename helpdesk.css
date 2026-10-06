@@ -181,7 +181,20 @@ a {
     right: 15px;
     padding: 10px 14px;
     font-size: 12px !important;
-  }  
+  }
+  details {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+details p {
+    text-align: left; /* A válasz szövege is legyen balra igazítva */
+  }
 }
 
 /* --- Letisztult GYIK Stílusok --- */
@@ -213,7 +226,7 @@ details p {
 /* Alapvető kártya formázás a kérdéseknek */
 details {
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 2px solid #e2e8f0;
   border-radius: 10px;
   margin-bottom: 12px;
   padding: 14px 18px;
