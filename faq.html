@@ -24,6 +24,14 @@
             <p>Itt megtalálod a válaszokat a belépéssel, jelszavakkal és rendszerekkel kapcsolatos leggyakoribb problémákra.</p>
             <p>A kérdésre kattintva lenyílik a válasz.</p>
 
+            <div class="faq-search-container">
+            <input 
+                type="text" 
+                id="faq-search" 
+                placeholder="Keresés a kérdések és válaszok között..."
+            >
+            </div>
+
             <!-- 1. KATEGÓRIA: Jelszóváltás & Fiók -->
             <section class="faq-category">
                 <h2>🔐 Jelszóváltoztatás</h2>
@@ -155,6 +163,27 @@
             }
         });
     });
+    // Megvárjuk, míg a keresőmező megjelenik, és rákötjük a figyelőt
+const searchInput = document.getElementById('faq-search');
+
+if (searchInput) {
+  searchInput.addEventListener('input', function () {
+    const filter = this.value.toLowerCase().trim();
+    const detailsList = document.querySelectorAll('details');
+
+    detailsList.forEach((details) => {
+      // Kiolvassuk a kérdés és a válasz szövegét is
+      const text = details.textContent.toLowerCase();
+
+      // Ha a keresett szó benne van (vagy üres a kereső), mutatjuk, különben elrejtjük
+      if (filter === '' || text.includes(filter)) {
+        details.style.display = '';
+      } else {
+        details.style.display = 'none';
+      }
+    });
+  });
+}
     </script>
     </body>
 </html>
