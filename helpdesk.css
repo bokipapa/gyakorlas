@@ -149,55 +149,6 @@ a {
     color: blue;
 }
 
-/* Mobil és tablet beállítások (768px alatt) */
-@media (max-width: 768px) {
-  * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  header {
-    max-width: 100%;
-  }
-  
-  main {
-    font-size: 14px;
-    flex-direction: column;
-    overflow-x: hidden;
-    width: 100%;   
-  }
-  
-  button {
-    font-size: 0.85rem;
-  }
-  
-  aside {
-    font-size: 0.5rem;
-    padding: 2px 2px;
-  }
-
-  .floating-faq-button {
-    bottom: calc(15px + env(safe-area-inset-bottom)); 
-    right: 15px;
-    padding: 10px 14px;
-    font-size: 12px !important;
-  }
-  details {
-  background-color: #ffffff;
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  padding: 10px 14px;
-  transition: all 0.25s ease-in-out;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  text-align: left; 
-}
-details p {
-    text-align: left; /* A válasz szövege is legyen balra igazítva */
-    font-size: 14px;
-  }
-}
-
 /* --- Letisztult GYIK Stílusok --- */
 
 .faq-category h2 {
@@ -309,5 +260,54 @@ details p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobil és tablet beállítások (768px alatt) */
+@media (max-width: 768px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  header {
+    max-width: 100%;
+  }
+  
+  main {
+    font-size: 14px;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;   
+  }
+  
+  button {
+    font-size: 0.85rem;
+  }
+  
+  aside {
+    font-size: 0.5rem;
+    padding: 2px 2px;
+  }
+
+  .floating-faq-button {
+    bottom: calc(15px + env(safe-area-inset-bottom)); 
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 12px !important;
+  }
+  details {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left; 
+}
+details p {
+    text-align: left; /* A válasz szövege is legyen balra igazítva */
+    font-size: 14px;
   }
 }
