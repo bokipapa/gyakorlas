@@ -245,7 +245,6 @@ details p {
   margin: 0;
   color: #55AD20;
   line-height: 1.6;
-  font-size: 2rem;
   border-top: 1px solid #e2e8f0;
   padding-top: 12px;
   animation: fadeIn 0.3s ease-in-out;
@@ -308,6 +307,5 @@ details p {
 }
 details p {
     text-align: left; /* A válasz szövege is legyen balra igazítva */
-    font-size: 14px;
   }
 }
