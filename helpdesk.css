@@ -334,5 +334,6 @@ details p {
   #faq-search {
     font-size: 0.9rem;
     padding: 10px 12px;
+    width: 80%;
   }
 }
