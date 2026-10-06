@@ -210,3 +210,90 @@ details p {
     color: #ff4d4d;
     font-weight: bold;
 }
+/* Alapvető kártya formázás a kérdéseknek */
+details {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Egér fölé vitelekor (Hover állapt) */
+details:hover {
+  border-color: #55AD20;
+}
+
+/* 🎯 LENYITOTT ÁLLAPOT KIEMELÉSE */
+details[open] {
+  background-color: #f1f6fa; /* Finom szürke/kék árnyalatú háttér */
+  border-color: #55AD20);     /* Színes, figyelemfelkeltő szegély */
+  box-shadow: 0 8px 20px -4px rgba(59, 130, 246, 0.15); /* Modern, lebegő árnyék */
+  transform: translateY(-2px); /* Enyhe kiemelkedés térben */
+}
+
+/* A fejlécrész (kérdés) formázása */
+summary {
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  list-style: none; /* Gyári nyíl elrejtése Chrome/Safari esetén */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+/* Gyári nyíl elrejtése Firefox esetén */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Saját modern, forgó nyíl ikon hozzáadása */
+summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #64748b;
+  border-bottom: 2px solid #64748b;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  margin-left: 12px;
+}
+
+/* Nyíl elforgatása lenyitáskor */
+details[open] summary::after {
+  transform: rotate(-135deg);
+  border-color: #55AD20;
+}
+
+/* Kiemelés a lenyitott kérdés címének */
+details[open] summary {
+  color: #ff5b5b;
+  margin-bottom: 12px;
+}
+
+/* A válasz szövegének formázása és finom megjelenítése */
+details p {
+  margin: 0;
+  color: #55AD20;
+  line-height: 1.6;
+  font-size: 2rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Finom áttűnés animáció a válasznak */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

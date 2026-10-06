@@ -89,7 +89,9 @@
         };
 
         // Elküldjük az adatot a saját PHP gyűjtőnknek (pl. collect.php)
-        fetch('https://analytics.ipkiber.hu/collect.php', {
+        // fetch('https://analytics.ipkiber.hu/collect.php', 
+        fetch('http://localhost:3000/collect.php',
+        {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
