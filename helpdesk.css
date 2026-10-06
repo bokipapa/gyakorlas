@@ -286,11 +286,11 @@ details p {
   
   aside {
     font-size: 0.5rem;
-    padding: 2px 2px;
+    padding: 2px 2px 30px;
   }
 
   .floating-faq-button {
-    bottom: calc(15px + env(safe-area-inset-bottom)); 
+    bottom: calc(25px + env(safe-area-inset-bottom)); 
     right: 15px;
     padding: 10px 14px;
     font-size: 12px !important;
@@ -308,4 +308,5 @@ details p {
 details p {
     text-align: left; /* A válasz szövege is legyen balra igazítva */
   }
+
 }
