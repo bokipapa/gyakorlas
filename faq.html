@@ -184,6 +184,27 @@ if (searchInput) {
     });
   });
 }
+    document.addEventListener('DOMContentLoaded', () => {
+        const data = {
+            pageUrl: window.location.pathname,
+            pageTitle: document.title,
+            referrer: document.referrer,
+            screenWidth: window.screen.width,
+            screenHeight: window.screen.height,
+            language: navigator.language || navigator.userLanguage,
+            timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            deviceType: window.innerWidth < 768 ? 'Mobile' : 'Desktop'
+        };
+
+        fetch('https://bokorovics.dscloud.me/analytics/collect.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(res => console.log('Mérés sikeres:', res))
+        .catch(err => console.error('Mérési hiba:', err));
+    });
     </script>
     </body>
 </html>
