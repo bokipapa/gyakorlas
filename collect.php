@@ -13,6 +13,61 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
+// Rate limiting: Maximum 10 kérés percenként IP-címenként
+$ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+$timeWindow = 60; // 60 másodperc
+$maxRequests = 10; // Max kérések száma
+
+$rateFile = sys_get_temp_dir() . '/rate_' . md5($ip) . '.json';
+$rateData = file_exists($rateFile) ? json_decode(file_get_contents($rateFile), true) : ['count' => 0, 'startTime' => time()];
+
+if (time() - $rateData['startTime'] > $timeWindow) {
+    // Új időablak indítása
+    $rateData = ['count' => 1, 'startTime' => time()];
+} else {
+    $rateData['count']++;
+}
+
+file_put_contents($rateFile, json_encode($rateData));
+
+if ($rateData['count'] > $maxRequests) {
+    http_response_code(429); // Too Many Requests
+    echo json_encode(["status" => "error", "message" => "Túl sok kérés! Próbáld újra később."]);
+    exit();
+}
+
+$userAgent = strtolower($_SERVER['HTTP_USER_AGENT'] ?? '');
+
+// Ismert botok és szörfözők listája
+$bots = ['bot', 'crawl', 'spider', 'slurp', 'curl', 'python', 'wget', 'headlesschrome'];
+
+foreach ($bots as $bot) {
+    if (strpos($userAgent, $bot) !== false) {
+        // Csendben leállunk, nem mentjük el
+        echo json_encode(["status" => "ignored", "message" => "Bot kérés figyelmen kívül hagyva"]);
+        exit();
+    }
+}
+
+$file = 'analytics.json';
+$maxRecords = 20000; // Maximum 20 000 bejegyzést őrzünk meg
+
+if (file_exists($file)) {
+    $existingContent = file_get_contents($file);
+    $currentData = json_decode($existingContent, true) ?? [];
+} else {
+    $currentData = [];
+}
+
+$currentData[] = $record;
+
+// Ha túlléptük a maximális darabszámot, a legrégebbi elemeket levágjuk az elejéről
+if (count($currentData) > $maxRecords) {
+    $currentData = array_slice($currentData, -$maxRecords);
+}
+
+file_put_contents($file, json_encode($currentData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
 // 1. Beérkező JSON adatok beolvasása
 $jsonInput = file_get_contents('php://input');
 $data = json_decode($jsonInput, true);
