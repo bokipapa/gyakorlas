@@ -209,6 +209,10 @@ summary {
   justify-content: space-between;
   align-items: center;
   user-select: none;
+  display: block !important;
+  text-align: left !important; /* Balra igazítja a kérdéseket */
+  position: relative !important;
+  padding-right: 25px !important; /* Helyet hagy a jobb oldali nyílnak */
 }
 
 /* Gyári nyíl elrejtése Firefox esetén */
@@ -226,12 +230,18 @@ summary::after {
   transform: rotate(45deg);
   transition: transform 0.25s ease;
   margin-left: 12px;
+  float: right; /* A nyilacska a jobb szélen marad */
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) rotate(45deg) !important; /* Nyíl függőleges középre igazítása */
 }
 
 /* Nyíl elforgatása lenyitáskor */
 details[open] summary::after {
   transform: rotate(-135deg);
   border-color: #55AD20;
+  transform: translateY(-50%) rotate(-135deg) !important;
 }
 
 /* Kiemelés a lenyitott kérdés címének */
@@ -239,6 +249,14 @@ details[open] summary {
   color: #ff5b5b;
   margin-bottom: 12px;
 }
+  /* Belső span elemek (pl. a piros Authentication failed) illeszkedése */
+  summary span {
+    display: inline !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: inherit !important;
+  }
+
 
 /* A válasz szövegének formázása és finom megjelenítése */
 details p {
